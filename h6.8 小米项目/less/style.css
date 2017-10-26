@@ -1,0 +1,40 @@
+p {
+  color: blue;
+}
+.border {
+  border: 2px solid red;
+}
+#style {
+  font-size: initial;
+}
+.underline {
+  color: orange;
+}
+.underline:hover {
+  text-decoration: underline;
+}
+div {
+  color: orange;
+}
+div:hover {
+  text-decoration: underline;
+}
+div {
+  border-left: 10px solid blue;
+  border-right: 10px dotted black;
+}
+div {
+  border-radius: 10px;
+}
+div {
+  box-shadow: 10px 20px 10px red;
+}
+main {
+  color: #ffff00;
+  color: #0000ff;
+  background-image: url(img/2.jpg);
+  background-repeat: no-repeat;
+  width: 214px;
+  height: 111px;
+  border: 1px solid yellow;
+}

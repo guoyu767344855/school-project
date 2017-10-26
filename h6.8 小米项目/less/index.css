@@ -1,0 +1,28 @@
+p {
+  text-align: center;
+  color: green;
+  font-size: 50px;
+  font-weight: bold;
+}
+section {
+  color: green;
+}
+p {
+  font-size: 40px;
+}
+p:after {
+  content: "heiheihei";
+}
+.border {
+  border: 1px solid red;
+  border-bottom: 2px solid blue;
+}
+#style {
+  font-style: italic;
+}
+div {
+  border: 1px solid red;
+  border-bottom: 2px solid blue;
+  font-style: italic;
+  background-color: green;
+}

@@ -1,0 +1,79 @@
+//一旦使用easy less插件之后 如果less语法出现错误 那么css文件无法同步
+@color:blue;
+p{
+    color: @color;
+}
+//设置一个混合样式
+.border{
+    border: 2px solid red;
+}
+#style{
+    font-size: initial;
+}
+// 嵌套
+.underline{
+    @color:orange;
+    color: @color;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+// 支持父子标签的格式
+// header{
+//     width: 200px;
+//     height: 200px;
+//     h1{
+//         font-size: 40px;
+//     }
+//     address{
+//         border: 1px solid black;
+//         span{
+//             color: red;
+//         }
+//     }
+// }
+div{
+    .underline
+}
+// 函数：调用样式集的时候传递进去参数 可以减少代码重复性
+// @width就是函数 将来调用该样式集的时候传递进来的参数就是@width代表
+.border(@width){
+    border-left: @width solid @color;
+    border-right: @width dotted black;
+}
+div{
+    .border(10px);
+}
+// 默认值为5px的函数
+.radius(@radius:5px){
+// less语法的核心就是再css的基础上添加的特性
+border-radius: @radius;
+}
+div{
+    .radius(10px);
+}
+// 同时支持多个函数
+.shadow(@x:0px;@y:0px;@blur:5px;@color:blue){
+    // 全部属性沿用arguments
+    box-shadow: @arguments;
+}
+div{
+    .shadow(10px, 20px, 10px, red);
+}
+// 支持运算
+main{
+    // color()系统的运算函数 和自身定义的@color是有区别的
+    color: color("#ff0");
+    color: color("blue");
+    // 容器大小要随着图片大小去变化
+    background-image: url(img/2.jpg);
+    background-repeat: no-repeat;
+    // 捕捉图片的宽高
+    // width: image-width("img/2.jpg");
+    // height: image-height("img/2.jpg");
+    width: 214px;
+    height: 111px;
+    // 取整  上取整
+    border: ceil(0.1px) solid yellow;
+}
+// 变量 函数 嵌套 运算 

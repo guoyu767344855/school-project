@@ -1,0 +1,42 @@
+//变量
+//设置了一个叫做@color的变量 代表的值是red
+//变量就是代表一种数据
+@color:red;
+p{
+    text-align: center;
+    //使用变量
+    color: @color;
+    font-size: 50px;
+    font-weight: bold;
+}
+section{
+    color: @color;
+}
+//重新赋值 会把之前的值替换掉
+//全局变量 作用域是整个文件
+@color:green;
+@font-size:30px;
+p{
+    //局部变量 作用域再当前的{}内部
+    @font-size:40px;
+    font-size: @font-size;
+}
+//通过一个现有的变量来初始化另一个变量
+@aa:"heiheihei";
+@bb:"aa";
+p:after{
+    content: @@bb;
+}
+//声明出来两个规则集
+.border{
+    border: 1px solid red;
+    border-bottom: 2px solid blue;
+}
+#style{
+    font-style: italic;
+}
+div{
+    .border;
+    #style;
+    background-color: @color;
+}

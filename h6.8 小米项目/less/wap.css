@@ -1,0 +1,45 @@
+header {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 100PX;
+  background-color: #f3f0e7;
+  position: relative;
+}
+img:nth-child(1) {
+  right: 110px;
+  top: 70px;
+  position: absolute;
+}
+img:nth-child(3) {
+  right: 110px;
+  bottom: 70px;
+  position: absolute;
+}
+img:nth-child(2) {
+  left: 110px;
+  bottom: 180px;
+  position: absolute;
+}
+footer {
+  width: 800px;
+  height: 35px;
+  margin: 0 auto;
+  background-color: red;
+  color: white;
+  border-top: 4px solid yellow;
+  position: relative;
+}
+span:nth-child(1) {
+  top: 8px;
+  left: 40px;
+  position: absolute;
+}
+span:nth-child(2) {
+  top: 8px;
+  right: 24px;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+}
